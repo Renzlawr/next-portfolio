@@ -1,3 +1,87 @@
-.test {
-    color: rgb(25, 225, 25);
+.navbar {
+    width: 100%;
+    height: 6rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+
+    .logo {
+        font-size: 2rem;
+        margin-left: 2rem;
+        cursor: pointer;
+    }
+    
+    .hamburger {
+        margin-left: 4rem;
+        margin-right: 2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: white;
+    }
+
+    .navList {
+        display: none;
+    }
+}
+
+.menu {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        height: 89%;
+        list-style: none;
+
+        .listItem {
+            margin: 1.75rem 0;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .navbar {
+        width: 100%;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+
+        .logo {
+            font-size: 2rem;
+            margin-left: 2rem;
+            cursor: pointer;
+        }
+        
+        .hamburger {
+            display: none;
+        }
+
+        .navList {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-right: 2rem;
+
+            .navListItem {
+                margin: 0 0 0 4rem;
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+    }
 }

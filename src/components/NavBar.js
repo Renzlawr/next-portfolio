@@ -1,24 +1,23 @@
 import React, { useState } from 'react'
 import styles from '../../styles/NavBar.module.scss'
+import hamburgers from '../../styles/hamburgers/hamburgers.module.scss'
 
 const NavBar = () => {
   const [hamburger, setHamburger] = useState(false)
 
   return (
-    <div className={hamburger && styles.menu}>
+    <div className={hamburger ? styles.menu : undefined}>
       <div className={styles.navbar}>
         <div className={styles.logo}>Logan Ramos</div>
-        <svg
+        <button
+          className={[hamburgers.hamburger, hamburgers['hamburger--spin'], hamburger ? hamburgers['is-active'] : undefined].join(' ')}
+          type="button"
           onClick={() => setHamburger(!hamburger)}
-          className={styles.hamburger}
-          viewBox='0 0 100 80'
-          width='40'
-          height='40'
         >
-          <rect rx='8' width='100' height='15'></rect>
-          <rect rx='8' y='30' width='100' height='15'></rect>
-          <rect rx='8' y='60' width='100' height='15'></rect>
-        </svg>
+          <span className={hamburgers['hamburger-box']}>
+            <span className={hamburgers['hamburger-inner']}></span>
+          </span>
+        </button> 
         <ul className={styles.navList}>
           {[
             ['about', 'link'],
@@ -43,7 +42,7 @@ const NavBar = () => {
             ['contact', 'link'],
           ].map(([string, link], index) => {
             return (
-              <li className={styles.listItem} key={index}>
+              <li className={[styles.listItem, hamburger ? styles['fade-in'] : undefined].join(' ')} key={index}>
                 {string}
               </li>
             )

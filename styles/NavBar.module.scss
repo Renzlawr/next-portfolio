@@ -12,20 +12,24 @@
         margin-left: 2rem;
         cursor: pointer;
     }
-    
-    .hamburger {
-        margin-left: 4rem;
-        margin-right: 2rem;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        fill: white;
-    }
 
     .navList {
         display: none;
     }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 1s;
 }
 
 .menu {

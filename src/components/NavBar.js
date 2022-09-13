@@ -10,7 +10,7 @@ const NavBar = () => {
       <div className={styles.navbar}>
         <div className={styles.logo}>Logan Ramos</div>
         <button
-          className={[hamburgers.hamburger, hamburgers['hamburger--spin'], hamburger ? hamburgers['is-active'] : undefined].join(' ')}
+          className={[styles.hamburger, hamburgers.hamburger, hamburgers['hamburger--spin'], hamburger ? hamburgers['is-active'] : undefined].join(' ')}
           type="button"
           onClick={() => setHamburger(!hamburger)}
         >

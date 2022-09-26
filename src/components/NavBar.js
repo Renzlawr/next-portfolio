@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../../styles/NavBar.module.scss'
 import hamburgers from '../../styles/hamburgers/hamburgers.module.scss'
 
 const NavBar = () => {
-  const [hamburger, setHamburger] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className={hamburger ? styles.menu : undefined}>
+    <div className={isMenuOpen ? styles.menu : undefined}>
       <div className={styles.navbar}>
         <div className={styles.logo}>Logan Ramos</div>
         <button
-          className={[styles.hamburger, hamburgers.hamburger, hamburgers['hamburger--spin'], hamburger ? hamburgers['is-active'] : undefined].join(' ')}
+          className={[styles.hamburger, hamburgers.hamburger, hamburgers['hamburger--spin'], isMenuOpen ? hamburgers['is-active'] : undefined].join(' ')}
           type="button"
-          onClick={() => setHamburger(!hamburger)}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span className={hamburgers['hamburger-box']}>
             <span className={hamburgers['hamburger-inner']}></span>
@@ -33,7 +33,7 @@ const NavBar = () => {
           })}
         </ul>
       </div>
-      {hamburger && (
+      {isMenuOpen && (
         <ul className={styles.list}>
           {[
             ['about', 'link'],
@@ -42,7 +42,7 @@ const NavBar = () => {
             ['contact', 'link'],
           ].map(([string, link], index) => {
             return (
-              <li className={[styles.listItem, hamburger ? styles['fade-in'] : undefined].join(' ')} key={index}>
+              <li className={[styles.listItem, isMenuOpen ? styles['fade-in'] : undefined].join(' ')} key={index}>
                 {string}
               </li>
             )

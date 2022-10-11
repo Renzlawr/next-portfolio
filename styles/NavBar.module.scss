@@ -6,11 +6,16 @@
     align-items: center;
     justify-content: space-between;
     user-select: none;
+    border-bottom: rgb(0, 255, 200) solid .5rem;
 
     .logo {
         font-size: 2rem;
         margin-left: 2rem;
         cursor: pointer;
+    }
+
+    .hamburger {
+        margin-right: 1rem;
     }
 
     .navList {

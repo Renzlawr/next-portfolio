@@ -1,14 +1,10 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
 
-const Home = () => {
+const index = () => {
   return (
     <>
-      <NavBar />
-      <Footer />
     </>
   )
 }
 
-export default Home
+export default index

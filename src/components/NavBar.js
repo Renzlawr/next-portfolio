@@ -29,8 +29,8 @@ const NavBar = () => {
             ['contact', '/contact'],
           ].map(([string, link], index) => {
             return (
-              <Link href={link}>
-                <li className={styles.navListItem} key={index}>
+              <Link href={link} key={index}>
+                <li className={styles.navListItem}>
                   {string}
                 </li>
               </Link>
@@ -47,8 +47,8 @@ const NavBar = () => {
             ['contact', '/contact'],
           ].map(([string, link], index) => {
             return (
-              <Link href={link}>
-                <li onClick={() => setIsMenuOpen(false)} className={[styles.listItem, isMenuOpen ? styles['fade-in'] : undefined].join(' ')} key={index}>
+              <Link href={link} key={index}>
+                <li onClick={() => setIsMenuOpen(false)} className={[styles.listItem, isMenuOpen ? styles['fade-in'] : undefined].join(' ')}>
                   {string}
                 </li>
               </Link>

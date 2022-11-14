@@ -1,0 +1,31 @@
+.topHeroBox {
+  background-color: #240046;
+  width: 100vw;
+  height: 35vh;
+}
+
+.bottomHeroBox {
+  background-color: #FF6D00;
+  width: 100vw;
+  height: 55vh;
+
+  .heroWave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .heroWave svg {
+      position: relative;
+      display: block;
+      width: calc(154% + 1.3px);
+      height: 333px;
+  }
+
+  .heroWave .shape-fill {
+      fill: #FF6D00;
+  }
+}

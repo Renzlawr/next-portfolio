@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     user-select: none;
-    border-bottom: rgb(255, 109, 0) solid .5rem;
+    // border-bottom: rgb(255, 109, 0) solid .5rem;
 
     .logo {
         font-size: 2rem;
@@ -71,10 +71,11 @@
         align-items: center;
         justify-content: space-between;
         user-select: none;
+        background-color: #240046;
 
         .logo {
             font-size: 2rem;
-            margin-left: 2rem;
+            margin-left: 3rem;
             cursor: pointer;
         }
         
@@ -86,7 +87,7 @@
             display: flex;
             justify-content: center;
             list-style: none;
-            margin-right: 2rem;
+            margin-right: 3rem;
 
             .navListItem {
                 margin: 0 0 0 4rem;

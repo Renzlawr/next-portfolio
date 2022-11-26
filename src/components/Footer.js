@@ -1,10 +1,13 @@
 import React from 'react'
 import styles from '../../styles/Footer.module.scss'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <span>© Logan Ramos 2022</span>
+      <Link href="/about">
+        <span>© Logan Ramos 2022</span>
+      </Link>
     </footer>
   )
 }

@@ -1,0 +1,9 @@
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .skills-container {
+    width: 50vw;
+  }
+}

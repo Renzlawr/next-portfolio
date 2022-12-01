@@ -15,3 +15,48 @@
   }
 }
 
+@media only screen and (min-width: 800px) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: 80vh;
+    width: 100vw;
+  
+    .prof-pic-container {
+      margin: 0 2rem;
+      height: auto;
+      width: 35vw;
+    }
+    
+    .hero-text {
+      margin: 0 2rem;
+      width: 40vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: 80vh;
+    width: 100vw;
+  
+    .prof-pic-container {
+      margin: 0 2rem;
+      height: auto;
+      width: 25vw;
+    }
+    
+    .hero-text {
+      margin: 0 2rem;
+      width: 40vw;
+    }
+  }
+}

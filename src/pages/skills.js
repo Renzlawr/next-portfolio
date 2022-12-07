@@ -33,11 +33,9 @@ const skills = () => {
     <div className={styles.skills}>
       <h1>My Skills</h1>
       <div className={styles['skills-container']}>
-        {
-          skillIcons.map(([skillName, skillLink], index) => {
-            return <img key={index} src={skillLink} alt={`Icon for ${skillName}`} />
-          })
-        }
+        {skillIcons.map(([skillName, skillLink], index) => {
+          return <img className={styles['skill-icons']} key={index} src={skillLink} alt={`Icon for ${skillName}`} />
+        })}
       </div>  
     </div>
   )

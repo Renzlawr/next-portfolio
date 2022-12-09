@@ -5,11 +5,18 @@
 
   .skills-container {
     width: 50vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .skill-icons {
       height: 60px;
       width: 60px;
-      padding: 1rem 1rem;
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 25px;
+      background-color: #FF8A8A;
     }
   }
 }

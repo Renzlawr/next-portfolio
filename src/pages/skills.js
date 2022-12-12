@@ -10,7 +10,7 @@ const skills = () => {
     ['PostgreSQL', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'],
     ['React', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'],
     ['Rails', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain-wordmark.svg'],
-    ['Tailwind CSS', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg'],
+    ['Tailwind CSS', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg'],
     ['BootStrap', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'],
     ['Jest', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg'],
     ['Next.js', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg'],
@@ -18,7 +18,7 @@ const skills = () => {
     ['ESLint', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg'],
     ['Git', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg'],
     ['GitHub', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg'],
-    ['VSCode', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg'],
+    ['VSCode', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg'],
     ['Figma', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'],
     ['Trello', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain-wordmark.svg'],
     ['Slack', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg'],
@@ -34,7 +34,12 @@ const skills = () => {
       <h1>My Skills</h1>
       <div className={styles['skills-container']}>
         {skillIcons.map(([skillName, skillLink], index) => {
-          return <img className={styles['skill-icons']} key={index} src={skillLink} alt={`Icon for ${skillName}`} />
+          return(
+            <div className={styles['skill-container']}>
+              <img className={styles['skill-icons']} key={index} src={skillLink} alt={`Icon for ${skillName}`} />
+              <p>{skillName}</p>
+            </div>
+          )
         })}
       </div>  
     </div>

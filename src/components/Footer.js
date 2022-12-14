@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Link href="/about">
+      <Link href="/">
         <span>© Logan Ramos 2022</span>
       </Link>
     </footer>

@@ -1,34 +1,64 @@
 .skills {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 
   .skills-container {
-    width: 90vw;
-    height: auto;
+    padding: 0 .25rem;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(73, 73, 73);
-    border-radius: 25px;
-    padding: 1rem 0;
-
+    flex-wrap: wrap;
 
     .skill-container {
+      background-color: rgb(246, 246, 246);
       display: flex;
-      flex-direction: column;
+      margin: .25rem .25rem;
       align-items: center;
-      height: 70px;
-      width: 70px;
-      padding: 1.5rem;
-      margin: 1rem .5rem;
       justify-content: center;
-      text-align: center;
+      flex-direction: column;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 25px;
+      cursor: pointer;
 
       .skill-icons {
-        height: 70px;
-        width: 70px;
+        height: 50px;
+        width: 50px;
       }
-    }    
+      // To be worked on
+      .skill-text {
+        background-color: orange;
+        text-align: center;
+        color: rgb(31, 31, 31);
+        font-size: small;
+        position: relative;
+        margin: 0;
+        display: none;
+      }
+    }   
+  }
+  .call-to-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    width: 75vw;
+    height: 3rem;
+    color: black;
+    background-color: rgb(246, 246, 246);
+    border-radius: 15px;
+    margin-top: 3rem;
+    cursor: pointer;
+    font-weight: 550;
+
+    .right-arrow {
+      width: 1.5rem;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 0 .25rem;
+    }
   }
 }

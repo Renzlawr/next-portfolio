@@ -3,15 +3,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-
+  margin-bottom: 2rem;
+  
   .prof-pic-container {
-    height: auto;
-    width: 80vw;
+    height: 19rem;
+    width: 19rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(246, 246, 246);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    .prof-pic {
+      height: 17rem;
+      width: 17rem;
+      border-radius: 25px;
+    }
   }
   
   .hero-text {
+    width: 17rem;
     margin: 0 2rem;
+    background-color: rgb(246, 246, 246);
+    color: rgb(10, 10, 10);
+    padding: 0 1rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from '../../styles/skills.module.scss'
 import RightArrow from '../assets/RightArrow.js'
 import Link from 'next/link'
@@ -34,13 +34,16 @@ const skills = () => {
   return (
     <div className={styles.skills}>
       <div className={styles['skills-container']}>
-        {skillIcons.map(([skillName, skillLink], index) => {
-          return(
-            <div className={styles['skill-container']}>
-              <img className={styles['skill-icons']} key={index} src={skillLink} alt={`Icon for ${skillName}`} />
-              <p className={styles['skill-text']}>{skillName}</p>
-            </div>
-          )
+        
+          {skillIcons.map(([skillName, skillLink], index) => {
+            return(
+              <div key={index} className={styles['skill-drop-box']}>
+                <div className={styles['skill-container']}>
+                  <img className={styles['skill-icons']} key={index} src={skillLink} alt={`Icon for ${skillName}`} />
+                </div>
+                <p className={styles['skill-text']}>{skillName}</p>
+              </div>
+            )
         })}
       </div>
       <Link href='/contact'>

@@ -9,10 +9,10 @@ const projects = () => {
       {projectList.map((project, index) => {
         return (
           <div key={index} className={styles.project}>
-            <Image src={project.image} />
-            <h1>{project.name}</h1>
-            <p>{project.description}</p>
-            <p>{`Coded in: ${project.languages}`}</p>
+            <Image src={project.image} className={styles['project-image']} />
+            <div className={styles['project-name']}>{project.name}</div>
+            <p className={styles['project-desc']}>{project.description}</p>
+            <p className={styles['project-lang']}>{`Made with: ${project.languages} eventually have logos from skills page in the same format here instead of plain text also make this a dropdown instead of all up in your face to minimize distraction`}</p>
           </div>
         )
       })}

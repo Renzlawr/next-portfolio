@@ -1,32 +1,15 @@
 import React from 'react'
 import styles from '../../styles/projects.module.scss'
+import projectList from '../assets/projectList'
+import Image from 'next/image'
 
 const projects = () => {
-  const projectList = [
-    {
-      name: 'test',
-      description: 'this is a bigger test',
-      languages: 'Next.js, Sass, Etc.'
-    },
-    {
-      name: 'test',
-      description: 'this is a bigger test',
-      languages: 'Next.js, Sass, Etc.'
-    },
-    {
-      name: 'test',
-      description: 'this is a bigger test',
-      languages: 'Next.js, Sass, Etc.'
-    }
-  ]
-
-  console.log(projectList.map(project => project.name))
-
   return (
     <div className={styles['projects-container']}>
       {projectList.map((project, index) => {
         return (
           <div key={index} className={styles.project}>
+            <Image src={project.image} />
             <h1>{project.name}</h1>
             <p>{project.description}</p>
             <p>{`Coded in: ${project.languages}`}</p>

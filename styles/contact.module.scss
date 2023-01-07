@@ -4,5 +4,64 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: red;
+
+  .names-container {
+    display: flex;
+    flex-direction: row;
+
+    .name-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 1rem;
+    }
+  }
+
+  .input {
+    border: none;
+    background-color: #FAFAFA;
+    height: 2.5rem;
+    width: 35vw;
+    border-radius: .5rem;
+    color: rgb(10, 10, 10);
+    padding: 0 1rem;
+    margin: .5rem 0;
+  }
+
+  .input:focus {
+    outline: none;
+  }
+
+  .input-desc {
+    border: none;
+    background-color: #FAFAFA;
+    height: 7.5rem;
+    width: 75vw;
+    border-radius: .5rem;
+    color: rgb(10, 10, 10);
+    padding: 0 1rem;
+    margin: .5rem 0;
+  }
+
+  .input-desc:focus {
+    outline: none;
+  }
+
+  .submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    width: 75vw;
+    height: 3rem;
+    color: black;
+    background-color: rgb(246, 246, 246);
+    border-radius: 15px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    font-weight: 550;
+    border: none;
+  }
 }

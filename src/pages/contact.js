@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from '../../styles/contact.module.scss'
 
 const contact = () => {
   return (
-    <form>
+    <form className={styles['contact-container']}>
       <label for='first-name'>
         First Name:
       </label>
